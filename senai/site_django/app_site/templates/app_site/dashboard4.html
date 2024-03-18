@@ -1,0 +1,48 @@
+{% extends 'app_site/base.html' %}
+
+{% block title %} <title>Dashboard 4</title> {% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+
+<div class="bloco">
+	<h4 class="card-title text-center">Dashboard 4</h4>
+	{% csrf_token %}
+
+
+	<p class="texto">
+		Este dashboard permite uma visualização gráfica e numérica de indicadores intimamente ligados ao nível
+		socioeconômico de cada inscrito e que podem impactar no desempenho dos candidatos, referentes ao acesso a
+		tecnologias e quantidade de residentes no domicílio familiar. Todos os gráficos são sensíveis ao clique do
+		mouse, ação que passa a atuar também como um filtro adicional, impactando nos demais gráficos e visualizações
+		numéricas nos painéis correspondentes. Observe que é possível alternar entre ordem crescente ou decrescente com
+		o clique do mouse nos rótulos de colunas onde essa alternância é aplicável.
+</p>
+<p class="texto m-bottom">
+		Aqui também é possível uma visualização numérica em um painel dos dados referentes ao quantitativo de candidatos
+		inscritos, de participantes efetivos (que compareceram pelo menos em um dos dias de avaliações), dos faltantes
+		nos dois dias de provas e daqueles declarados como estudantes e treineiros. Por fim, é possível uma leitura da
+		média geral e da maior e menor média do grupo definido de acordo com as seleções escolhidas nos filtros.
+
+	</p>
+	<button class="desktop" onclick="var ifr=document.getElementsByName('Reload')[0]; ifr.src=ifr.src;">Redefinir
+		Gráficos</button>
+	<button class="mobile" onclick="var ifr=document.getElementsByName('Reload2')[0]; ifr.src=ifr.src;">Redefinir
+		Gráficos</button>
+</div>
+
+<iframe-foxy class="resize">
+
+	<iframe name="Reload" class="desktop""
+		src=" https://datastudio.google.com/embed/reporting/c8a3e394-759a-4082-84d9-e7d59e22d525/page/p_xuoq1k7gyc"
+		frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	<iframe name="Reload2" class="mobile"
+		src="https://datastudio.google.com/embed/reporting/0a87a191-2e68-49b5-a7cc-7f19fa3b0f68/page/p_xuoq1k7gyc"
+		frameborder="0" style="border:0" allowfullscreen></iframe>
+	<div class="mask"></div>
+</iframe-foxy>
+
+
+{% endblock %}

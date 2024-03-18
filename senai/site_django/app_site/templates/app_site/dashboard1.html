@@ -1,0 +1,50 @@
+{% extends 'app_site/base.html' %}
+
+{% block title %} <title>Dashboard 1</title> {% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+<div class="bloco">
+	<h4 class="card-title text-center">Dashboard 1</h4>
+	{% csrf_token %}
+
+
+	<p class="texto">
+		Este dashboard permite uma visualização numérica, conforme os filtros aplicados, de dados referentes ao
+		quantitativo de candidatos inscritos e, dentre os inscritos, o total de participantes efetivos (que compareceram
+		pelo menos em um dos dias de provas) e dos faltantes nos dois dias de avaliações. Adicionalmente, é possível uma
+		visualização quantitativa dos inscritos definidos como estudantes concorrentes às vagas em universidades, e
+		aqueles definidos como treineiros. Por fim, é possível uma leitura da média geral e da maior e menor média do
+		grupo definido de acordo com as seleções escolhidas nos filtros.
+		</p>
+		<p class="texto m-bottom">
+		Os gráficos permitem uma visualização em diagrama das variáveis referentes à etnia, nacionalidade, sexo, tipo de
+		escola frequentada pelo candidato, situação de conclusão do ensino médio, estado civil e faixa etária declarados
+		pelos inscritos. Estes gráficos, da mesma forma, serão representados conforme o grupo definido através dos
+		filtros selecionados nas variáveis do menu suspenso. Use o cursor do mouse sobre os elementos gráficos para
+		destacar uma informação.
+
+	</p>
+	<button class="desktop" onclick="var ifr=document.getElementsByName('Reload')[0]; ifr.src=ifr.src;">Redefinir
+		Gráficos</button>
+	<button class="mobile" onclick="var ifr=document.getElementsByName('Reload2')[0]; ifr.src=ifr.src;">Redefinir
+		Gráficos</button>
+
+</div>
+
+<iframe-foxy class="resize">
+
+	<iframe name="Reload" class="desktop"
+		src="https://datastudio.google.com/embed/reporting/c8a3e394-759a-4082-84d9-e7d59e22d525/page/66x1C"
+		frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	<iframe name="Reload2" class="mobile"
+		src="https://datastudio.google.com/embed/reporting/0a87a191-2e68-49b5-a7cc-7f19fa3b0f68/page/66x1C"
+		frameborder="0" style="border:0" allowfullscreen></iframe>
+	<div class="mask"></div>
+</iframe-foxy>
+
+
+
+{% endblock %}
