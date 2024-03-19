@@ -2,25 +2,32 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request,'app_site/index.html')
+    titulo = 'Home'
+    return render(request,'app_site/index.html', {'titulo': titulo})
 
 def db1(request):
-    return render(request,'app_site/dashboard1.html')
+    titulo = 'Dasboard 1'
+    return render(request,'app_site/dashboard1.html', {'titulo': titulo})
 
 def db2(request):
-    return render(request,'app_site/dashboard2.html')
+    titulo = 'Dasboard 2'
+    return render(request,'app_site/dashboard2.html', {'titulo': titulo})
 
 def db3(request):
-    return render(request,'app_site/dashboard3.html')
+    titulo = 'Dasboard 3'
+    return render(request,'app_site/dashboard3.html', {'titulo': titulo})
 
 def db4(request):
-    return render(request,'app_site/dashboard4.html')
+    titulo = 'Dasboard 4'
+    return render(request,'app_site/dashboard4.html', {'titulo': titulo})
 
 def faq(request):
-    return render(request,'app_site/faq.html')
+    titulo = 'Faq'
+    return render(request,'app_site/faq.html', {'titulo': titulo})
 
 def about(request):
-    return render(request,'app_site/sobre.html')
+    titulo = 'Sobre o Projeto'
+    return render(request,'app_site/sobre.html', {'titulo': titulo})
 
 
 
